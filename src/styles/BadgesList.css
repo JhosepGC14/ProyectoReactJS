@@ -1,0 +1,58 @@
+
+.BadgesList ul > li {
+  margin-bottom: 1rem;
+}
+
+.BadgesList{
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  /* width: 50%; */
+  flex-wrap: wrap;
+}
+
+.BadgesListItem {
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(10, 10, 10, 0.50);
+  margin: 0.8rem;
+  padding: 1rem;
+  align-items: center;
+  width: 31.6122222222222%;
+}
+
+.BadgesListItem__avatar {
+  border-radius: 50%;
+  background: #a3a3a3;
+  margin-right: 0.5rem;
+  width: 80px;
+  height: 80px;
+  margin-left: 12px;
+}
+
+.twitter-logo{
+    width: 30px;
+}
+
+.twitter-name{
+    display: inline-block;
+}
+
+.contenedor{
+    padding-left: 20px;
+}
+
+.contenedor strong, a {
+    display: block;
+}
+@media only screen and (min-width: 700px) and (max-width: 1250px){
+  .BadgesListItem{
+    width: 50%;
+  }
+
+  .BadgesList{
+    justify-content: center;
+  }
+}

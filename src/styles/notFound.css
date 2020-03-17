@@ -1,0 +1,39 @@
+.Badges__notFound {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 0;
+  background: url("../images/stars.svg");
+  background-color: #1b1b25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.Badges__notFound img {
+  width: 500px;
+}
+
+.Badges__notFound h1 {
+  font-size: 48px;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+}
+
+.Badges__notFound h2 {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.Badges__notFound p {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.text__notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
