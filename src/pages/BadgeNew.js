@@ -4,9 +4,12 @@ import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 import "../styles/BadgeNew.css";
 import api from "../api";
+import PageLoading from "../components/PageLoading";
 
 class BadgeNew extends React.Component {
   state = {
+    loading: false,
+    error: null,
     form: {
       firstName: "",
       lastName: "",
@@ -36,6 +39,7 @@ class BadgeNew extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+    this.setState({loading: true, error:null});
     try {
       await api.badges.create(this.state.form);
       this.setState({ loading: false });
@@ -45,6 +49,9 @@ class BadgeNew extends React.Component {
   };
 
   render() {
+    if(this.state.loading){
+      return <PageLoading/>
+    }
     return (
       <React.Fragment>
         <div className="BadgeNew__hero">

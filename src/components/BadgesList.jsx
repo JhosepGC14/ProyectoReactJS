@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/BadgesList.css";
+import "./styles/BadgesList.css";
 import twitterLogo from "../images/twitter-logo.svg";
-import Gravatar from '../components/Gravatar';
+import Gravatar from './Gravatar';
 
 class BadgesList extends React.Component {
   render() {
