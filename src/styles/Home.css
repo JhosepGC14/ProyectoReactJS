@@ -18,6 +18,11 @@
     text-align: center;
   }
   
-  @media screen and (min-width: 768px) {
-  
+  @media screen and (max-width: 768px) {
+    .Home{
+      flex-direction: column;
+    }
+    .Home__col{
+      margin: 2rem 0px;
+    }
   }
