@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 class BadgeForm extends React.Component {
   // state ={};
@@ -16,17 +17,17 @@ class BadgeForm extends React.Component {
     console.log("Button was clicked");
   };
 
-  handleSubmit = e =>{
+  handleSubmit = e => {
     e.preventDefault();
-    console.log("Form was submitted")
-    console.log(this.state)
-  }
+    console.log("Form was submitted");
+    console.log(this.state);
+  };
+
   render() {
     return (
       <div>
         <h1>New Attendant</h1>
-
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name: </label>
             <input
@@ -34,7 +35,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="firstName"
-              value ={this.props.formValues.firstName}
+              value={this.props.formValues.firstName}
             />
           </div>
           <div className="form-group">
@@ -44,7 +45,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="lastName"
-              value ={this.props.formValues.lastName}
+              value={this.props.formValues.lastName}
             />
           </div>
           <div className="form-group">
@@ -54,7 +55,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="lastName2"
-              value ={this.props.formValues.lastName2}
+              value={this.props.formValues.lastName2}
             />
           </div>
           <div className="form-group">
@@ -64,7 +65,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="email"
               name="email"
-              value ={this.props.formValues.email}
+              value={this.props.formValues.email}
             />
           </div>
           <div className="form-group">
@@ -74,7 +75,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="jobTitle"
-              value ={this.props.formValues.jobTitle}
+              value={this.props.formValues.jobTitle}
             />
           </div>
           <div className="form-group">
@@ -84,12 +85,12 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="page"
-              value ={this.props.formValues.page}
+              value={this.props.formValues.page}
             />
           </div>
-          <button onClick={this.handleClick} className="btn btn-primary">
-            Save
-          </button>
+            <button href="/badges" onClick={this.handleClick} className="btn btn-primary">
+              Save
+            </button>
         </form>
       </div>
     );
